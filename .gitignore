@@ -6,3 +6,8 @@ __pycache__/
 venv/
 dist/
 build/
+
+# ignore python virtual environments
+venv_pytest/
+venv_pytest2/
+venv*/
