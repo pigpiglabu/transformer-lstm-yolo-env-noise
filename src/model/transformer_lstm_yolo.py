@@ -19,7 +19,7 @@ class TransformerLSTYOLO(nn.Module):
         super().__init__()
         self.input_proj = nn.Linear(input_dim, d_model)
         self.pos = PositionalEncoding(d_model, max_len=max_len)
-        encoder_layer = nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward=d_model*4, dropout=dropout, activation=relu)
+        encoder_layer = nn.TransformerEncoderLayer(d_model, nhead, dim_feedforward=d_model*4, dropout=dropout, activation="relu")
         self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_encoder_layers)
         self.lstm = nn.LSTM(d_model, lstm_hidden, batch_first=True)
         self.horizon = horizon
