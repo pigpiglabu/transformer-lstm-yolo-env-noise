@@ -1,0 +1,8 @@
+*.*o
+*.pyc
+__pycache__/
+*.log
+*.tmp
+venv/
+dist/
+build/
